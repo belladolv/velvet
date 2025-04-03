@@ -339,648 +339,757 @@
         </div>
     </section>
 
-  
-            <!-- ... (Todo o cabeçalho e CSS permanecem iguais) ... -->
+    <!-- Seção de Produtos -->
+    <section id="produtos" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Nossos Produtos</h2>
+            
+            <!-- Bases -->
+            <h3 class="categoria-title">Bases e Corretivos</h3>
+            <div class="row">
+                <!-- Produto 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/base-liquida.jpg" class="card-img-top" alt="Base Líquida">
+                        <div class="card-body">
+                            <h5 class="card-title">Base Líquida HD</h5>
+                            <p class="card-text">Cobertura buildable e acabamento natural.</p>
+                            <div class="mb-2">
+                                <span class="color-swatch" style="background: #f5d0b9;" title="Bege Claro"></span>
+                                <span class="color-swatch" style="background: #e3b18b;" title="Bege Médio"></span>
+                                <span class="color-swatch" style="background: #d2a279;" title="Bege Escuro"></span>
+                                <span class="color-swatch" style="background: #8d5524;" title="Marrom Claro"></span>
+                            </div>
+                            <p class="h5 text-primary">R$ 99,90</p>
+                            <p class="text-muted small">12x R$ 8,32 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Base Líquida HD', 99.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Base Líquida HD', 99.90)" data-nome="Base Líquida HD">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/base-matte.jpg" class="card-img-top" alt="Base Matte">
+                        <div class="card-body">
+                            <h5 class="card-title">Base Matte 24h</h5>
+                            <p class="card-text">Controle de oleosidade e longa duração.</p>
+                            <div class="mb-2">
+                                <span class="color-swatch" style="background: #f3e9d2;" title="Clara"></span>
+                                <span class="color-swatch" style="background: #e8d5b5;" title="Média"></span>
+                                <span class="color-swatch" style="background: #d4b38f;" title="Escura"></span>
+                                <span class="color-swatch" style="background: #a87c52;" title="Marrom"></span>
+                            </div>
+                            <p class="h5 text-primary">R$ 109,90</p>
+                            <p class="text-muted small">12x R$ 9,16 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Base Matte 24h', 109.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Base Matte 24h', 109.90)" data-nome="Base Matte 24h">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/corretivo.jpg" class="card-img-top" alt="Corretivo">
+                        <div class="card-body">
+                            <h5 class="card-title">Corretivo Cobertor</h5>
+                            <p class="card-text">Alta cobertura para olheiras e imperfeições.</p>
+                            <div class="mb-2">
+                                <span class="color-swatch" style="background: #f9d5bb;" title="Claro"></span>
+                                <span class="color-swatch" style="background: #e6ba95;" title="Médio"></span>
+                                <span class="color-swatch" style="background: #d4a276;" title="Escuro"></span>
+                            </div>
+                            <p class="h5 text-primary">R$ 49,90</p>
+                            <p class="text-muted small">6x R$ 8,32 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Corretivo Cobertor', 49.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Corretivo Cobertor', 49.90)" data-nome="Corretivo Cobertor">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/iluminador.jpg" class="card-img-top" alt="Iluminador">
+                        <div class="card-body">
+                            <h5 class="card-title">Iluminador Líquido</h5>
+                            <p class="card-text">Brilho natural para realçar pontos altos.</p>
+                            <div class="mb-2">
+                                <span class="color-swatch" style="background: #f5f0e8;" title="Pérola"></span>
+                                <span class="color-swatch" style="background: #e8d8c0;" title="Dourado"></span>
+                                <span class="color-swatch" style="background: #d4c4a8;" title="Rosé"></span>
+                            </div>
+                            <p class="h5 text-primary">R$ 69,90</p>
+                            <p class="text-muted small">6x R$ 11,65 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Iluminador Líquido', 69.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Iluminador Líquido', 69.90)" data-nome="Iluminador Líquido">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Batons -->
+            <h3 class="categoria-title">Batons</h3>
+            <div class="row">
+                <!-- Produto 5 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/batom-vermelho.jpg" class="card-img-top" alt="Batom Vermelho">
+                        <div class="card-body">
+                            <h5 class="card-title">Batom Matte Vermelho</h5>
+                            <p class="card-text">Vermelho clássico para um look marcante.</p>
+                            <p class="h5 text-primary">R$ 59,90</p>
+                            <p class="text-muted small">6x R$ 9,98 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Batom Matte Vermelho', 59.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Batom Matte Vermelho', 59.90)" data-nome="Batom Matte Vermelho">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 6 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/batom-rosa.jpg" class="card-img-top" alt="Batom Rosa">
+                        <div class="card-body">
+                            <h5 class="card-title">Batom Líquido Rosa</h5>
+                            <p class="card-text">Rosa nude para um look natural e sofisticado.</p>
+                            <p class="h5 text-primary">R$ 65,90</p>
+                            <p class="text-muted small">6x R$ 10,98 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Batom Líquido Rosa', 65.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Batom Líquido Rosa', 65.90)" data-nome="Batom Líquido Rosa">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 7 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/batom-marrom.jpg" class="card-img-top" alt="Batom Marrom">
+                        <div class="card-body">
+                            <h5 class="card-title">Batom Creme Marrom</h5>
+                            <p class="card-text">Marrom terroso para um look moderno.</p>
+                            <p class="h5 text-primary">R$ 62,90</p>
+                            <p class="text-muted small">6x R$ 10,48 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Batom Creme Marrom', 62.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Batom Creme Marrom', 62.90)" data-nome="Batom Creme Marrom">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 8 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/gloss.jpg" class="card-img-top" alt="Gloss Labial">
+                        <div class="card-body">
+                            <h5 class="card-title">Gloss Labial Brilhante</h5>
+                            <p class="card-text">Brilho intenso com hidratação prolongada.</p>
+                            <p class="h5 text-primary">R$ 45,90</p>
+                            <p class="text-muted small">6x R$ 7,65 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Gloss Labial Brilhante', 45.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Gloss Labial Brilhante', 45.90)" data-nome="Gloss Labial Brilhante">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Paletas -->
+            <h3 class="categoria-title">Paletas</h3>
+            <div class="row">
+                <!-- Produto 9 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/paleta-sombra.jpg" class="card-img-top" alt="Paleta de Sombras">
+                        <div class="card-body">
+                            <h5 class="card-title">Paleta de Sombras Nude</h5>
+                            <p class="card-text">12 tons neutros para looks do dia a noite.</p>
+                            <p class="h5 text-primary">R$ 129,90</p>
+                            <p class="text-muted small">12x R$ 10,82 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Paleta de Sombras Nude', 129.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Paleta de Sombras Nude', 129.90)" data-nome="Paleta de Sombras Nude">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 10 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/paleta-colorida.jpg" class="card-img-top" alt="Paleta Colorida">
+                        <div class="card-body">
+                            <h5 class="card-title">Paleta de Sombras Colorida</h5>
+                            <p class="card-text">15 cores vibrantes para looks criativos.</p>
+                            <p class="h5 text-primary">R$ 149,90</p>
+                            <p class="text-muted small">12x R$ 12,49 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Paleta de Sombras Colorida', 149.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Paleta de Sombras Colorida', 149.90)" data-nome="Paleta de Sombras Colorida">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 11 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/paleta-blush.jpg" class="card-img-top" alt="Paleta de Blush">
+                        <div class="card-body">
+                            <h5 class="card-title">Paleta de Blush</h5>
+                            <p class="card-text">6 tons de blush em pó para diferentes looks.</p>
+                            <p class="h5 text-primary">R$ 89,90</p>
+                            <p class="text-muted small">6x R$ 14,98 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Paleta de Blush', 89.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Paleta de Blush', 89.90)" data-nome="Paleta de Blush">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 12 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/paleta-contorno.jpg" class="card-img-top" alt="Paleta de Contorno">
+                        <div class="card-body">
+                            <h5 class="card-title">Paleta de Contorno</h5>
+                            <p class="card-text">Contorno, iluminação e correção em uma paleta.</p>
+                            <p class="h5 text-primary">R$ 119,90</p>
+                            <p class="text-muted small">12x R$ 9,99 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Paleta de Contorno', 119.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Paleta de Contorno', 119.90)" data-nome="Paleta de Contorno">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pincéis -->
+            <h3 class="categoria-title">Pincéis e Acessórios</h3>
+            <div class="row">
+                <!-- Produto 13 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/kit-pinceis.jpg" class="card-img-top" alt="Kit de Pincéis">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Completo de Pincéis</h5>
+                            <p class="card-text">12 pincéis profissionais para maquiagem.</p>
+                            <p class="h5 text-primary">R$ 159,90</p>
+                            <p class="text-muted small">12x R$ 13,32 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Completo de Pincéis', 159.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Completo de Pincéis', 159.90)" data-nome="Kit Completo de Pincéis">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 14 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/esponja.jpg" class="card-img-top" alt="Esponja de Maquiagem">
+                        <div class="card-body">
+                            <h5 class="card-title">Esponja Beauty Blender</h5>
+                            <p class="card-text">Para aplicação perfeita de base e corretivo.</p>
+                            <p class="h5 text-primary">R$ 39,90</p>
+                            <p class="text-muted small">6x R$ 6,65 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Esponja Beauty Blender', 39.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Esponja Beauty Blender', 39.90)" data-nome="Esponja Beauty Blender">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 15 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/limpa-pinceis.jpg" class="card-img-top" alt="Limpa Pincéis">
+                        <div class="card-body">
+                            <h5 class="card-title">Shampoo para Pincéis</h5>
+                            <p class="card-text">Limpa e conserva seus pincéis como novos.</p>
+                            <p class="h5 text-primary">R$ 29,90</p>
+                            <p class="text-muted small">6x R$ 4,98 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Shampoo para Pincéis', 29.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Shampoo para Pincéis', 29.90)" data-nome="Shampoo para Pincéis">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 16 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/necessaire.jpg" class="card-img-top" alt="Necessaire">
+                        <div class="card-body">
+                            <h5 class="card-title">Necessaire Profissional</h5>
+                            <p class="card-text">Organize seus produtos com estilo.</p>
+                            <p class="h5 text-primary">R$ 79,90</p>
+                            <p class="text-muted small">6x R$ 13,32 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Necessaire Profissional', 79.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Necessaire Profissional', 79.90)" data-nome="Necessaire Profissional">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Olhos -->
+            <h3 class="categoria-title">Olhos</h3>
+            <div class="row">
+                <!-- Produto 17 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/mascara-cilios.jpg" class="card-img-top" alt="Máscara de Cílios">
+                        <div class="card-body">
+                            <h5 class="card-title">Máscara de Cílios Volume Extremo</h5>
+                            <p class="card-text">Proporciona volume e comprimento intenso sem aglomerar.</p>
+                            <p class="h5 text-primary">R$ 79,90</p>
+                            <p class="text-muted small">6x R$ 13,32 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Máscara de Cílios Volume Extremo', 79.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Máscara de Cílios Volume Extremo', 79.90)" data-nome="Máscara de Cílios Volume Extremo">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 18 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/delineador-liquido.jpg" class="card-img-top" alt="Delineador Líquido">
+                        <div class="card-body">
+                            <h5 class="card-title">Delineador Líquido Precision</h5>
+                            <p class="card-text">Ponta fina para traços precisos e acabamento mate.</p>
+                            <p class="h5 text-primary">R$ 59,90</p>
+                            <p class="text-muted small">6x R$ 9,98 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Delineador Líquido Precision', 59.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Delineador Líquido Precision', 59.90)" data-nome="Delineador Líquido Precision">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 19 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/sombra-liquida.jpg" class="card-img-top" alt="Sombra Líquida">
+                        <div class="card-body">
+                            <h5 class="card-title">Sombra Líquida Metálica</h5>
+                            <p class="card-text">Pigmentação intensa com efeito metalizado.</p>
+                            <div class="mb-2">
+                                <span class="color-swatch" style="background: #d4af37;" title="Dourado"></span>
+                                <span class="color-swatch" style="background: #c0c0c0;" title="Prata"></span>
+                                <span class="color-swatch" style="background: #b76e79;" title="Rosé"></span>
+                            </div>
+                            <p class="h5 text-primary">R$ 69,90</p>
+                            <p class="text-muted small">6x R$ 11,65 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Sombra Líquida Metálica', 69.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Sombra Líquida Metálica', 69.90)" data-nome="Sombra Líquida Metálica">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 20 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/sobrancelha.jpg" class="card-img-top" alt="Kit Sobrancelha">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Sobrancelha Perfeita</h5>
+                            <p class="card-text">Pó, gel e stencil para modelar sobrancelhas.</p>
+                            <div class="mb-2">
+                                <span class="color-swatch" style="background: #5c3b24;" title="Marrom Escuro"></span>
+                                <span class="color-swatch" style="background: #8b5a2b;" title="Marrom Médio"></span>
+                                <span class="color-swatch" style="background: #a67b5b;" title="Castanho"></span>
+                            </div>
+                            <p class="h5 text-primary">R$ 89,90</p>
+                            <p class="text-muted small">6x R$ 14,98 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Sobrancelha Perfeita', 89.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Sobrancelha Perfeita', 89.90)" data-nome="Kit Sobrancelha Perfeita">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skincare -->
+            <h3 class="categoria-title">Skincare</h3>
+            <div class="row">
+                <!-- Produto 21 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/cleanser.jpg" class="card-img-top" alt="Cleanser Facial">
+                        <div class="card-body">
+                            <h5 class="card-title">Cleanser Facial Suave</h5>
+                            <p class="card-text">Limpeza profunda sem ressecar a pele.</p>
+                            <p class="h5 text-primary">R$ 89,90</p>
+                            <p class="text-muted small">6x R$ 14,98 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Cleanser Facial Suave', 89.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Cleanser Facial Suave', 89.90)" data-nome="Cleanser Facial Suave">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 22 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/hidratante.jpg" class="card-img-top" alt="Hidratante Facial">
+                        <div class="card-body">
+                            <h5 class="card-title">Hidratante com Ácido Hialurônico</h5>
+                            <p class="card-text">Hidratação intensa por 24h.</p>
+                            <p class="h5 text-primary">R$ 129,90</p>
+                            <p class="text-muted small">12x R$ 10,82 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Hidratante com Ácido Hialurônico', 129.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Hidratante com Ácido Hialurônico', 129.90)" data-nome="Hidratante com Ácido Hialurônico">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 23 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/serum.jpg" class="card-img-top" alt="Sérum Facial">
+                        <div class="card-body">
+                            <h5 class="card-title">Sérum Vitamina C</h5>
+                            <p class="card-text">Clareamento e uniformização do tom da pele.</p>
+                            <p class="h5 text-primary">R$ 149,90</p>
+                            <p class="text-muted small">12x R$ 12,49 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Sérum Vitamina C', 149.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Sérum Vitamina C', 149.90)" data-nome="Sérum Vitamina C">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 24 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/protetor.jpg" class="card-img-top" alt="Protetor Solar">
+                        <div class="card-body">
+                            <h5 class="card-title">Protetor Solar FPS 70</h5>
+                            <p class="card-text">Proteção UVA/UVB com toque seco.</p>
+                            <p class="h5 text-primary">R$ 99,90</p>
+                            <p class="text-muted small">6x R$ 16,65 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Protetor Solar FPS 70', 99.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Protetor Solar FPS 70', 99.90)" data-nome="Protetor Solar FPS 70">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kits -->
+            <h3 class="categoria-title">Kits Exclusivos</h3>
+            <div class="row">
+                <!-- Produto 25 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/kit-make.jpg" class="card-img-top" alt="Kit Maquiagem Completa">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Maquiagem Profissional</h5>
+                            <p class="card-text">Base, batom, máscara de cílios e paleta de sombras.</p>
+                            <p class="h5 text-primary">R$ 299,90 <small class="text-danger"><del>R$ 379,80</del></small></p>
+                            <p class="text-muted small">12x R$ 24,99 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Maquiagem Profissional', 299.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Maquiagem Profissional', 299.90)" data-nome="Kit Maquiagem Profissional">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 26 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/kit-skincare.jpg" class="card-img-top" alt="Kit Skincare">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Rotina Skincare</h5>
+                            <p class="card-text">Cleanser, hidratante e protetor solar.</p>
+                            <p class="h5 text-primary">R$ 249,90 <small class="text-danger"><del>R$ 319,70</del></small></p>
+                            <p class="text-muted small">12x R$ 20,82 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Rotina Skincare', 249.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Rotina Skincare', 249.90)" data-nome="Kit Rotina Skincare">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 27 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/kit-viagem.jpg" class="card-img-top" alt="Kit Viagem">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Viagem Premium</h5>
+                            <p class="card-text">Necessaire com produtos em tamanho viagem.</p>
+                            <p class="h5 text-primary">R$ 179,90 <small class="text-danger"><del>R$ 229,90</del></small></p>
+                            <p class="text-muted small">12x R$ 14,99 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Viagem Premium', 179.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Viagem Premium', 179.90)" data-nome="Kit Viagem Premium">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produto 28 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card produto-card h-100">
+                        <img src="imagens/kit-presente.jpg" class="card-img-top" alt="Kit Presente">
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Presente Luxo</h5>
+                            <p class="card-text">Embalagem premium com produtos selecionados.</p>
+                            <p class="h5 text-primary">R$ 399,90 <small class="text-danger"><del>R$ 499,90</del></small></p>
+                            <p class="text-muted small">12x R$ 33,32 sem juros</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Presente Luxo', 399.90)">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Presente Luxo', 399.90)" data-nome="Kit Presente Luxo">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Seção de Produtos COMPLETA -->
-<section id="produtos" class="py-5">
-    <div class="container">
-        <h2 class="text-center section-title">Nossos Produtos</h2>
-        
-        <!-- Bases -->
-        <h3 class="categoria-title">Bases e Corretivos</h3>
-        <div class="row">
-            <!-- Produto 1 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/base-liquida.jpg" class="card-img-top" alt="Base Líquida">
-                    <div class="card-body">
-                        <h5 class="card-title">Base Líquida HD</h5>
-                        <p class="card-text">Cobertura buildable e acabamento natural.</p>
-                        <div class="mb-2">
-                            <span class="color-swatch" style="background: #f5d0b9;" title="Bege Claro"></span>
-                            <span class="color-swatch" style="background: #e3b18b;" title="Bege Médio"></span>
-                            <span class="color-swatch" style="background: #d2a279;" title="Bege Escuro"></span>
-                            <span class="color-swatch" style="background: #8d5524;" title="Marrom Claro"></span>
+    <!-- Seção de Dúvidas Frequentes -->
+    <section id="duvidas" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Dúvidas Frequentes</h2>
+            
+            <div class="accordion" id="accordionFAQ">
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Como faço para comprar?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <p>Navegue pelos nossos produtos, selecione os itens desejados e clique em <strong>"Comprar"</strong>. Acompanhe seu pedido no <strong>carrinho</strong> e finalize quando estiver pronto!</p>
                         </div>
-                        <p class="h5 text-primary">R$ 99,90</p>
-                        <p class="text-muted small">12x R$ 8,32 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Base Líquida HD', 99.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Base Líquida HD', 99.90)" data-nome="Base Líquida HD">
-                            <i class="bi bi-heart"></i>
-                        </button>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Produto 2 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/base-matte.jpg" class="card-img-top" alt="Base Matte">
-                    <div class="card-body">
-                        <h5 class="card-title">Base Matte 24h</h5>
-                        <p class="card-text">Controle de oleosidade e longa duração.</p>
-                        <div class="mb-2">
-                            <span class="color-swatch" style="background: #f3e9d2;" title="Clara"></span>
-                            <span class="color-swatch" style="background: #e8d5b5;" title="Média"></span>
-                            <span class="color-swatch" style="background: #d4b38f;" title="Escura"></span>
-                            <span class="color-swatch" style="background: #a87c52;" title="Marrom"></span>
+                
+                <!-- Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Qual o prazo de entrega?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <p>Entregamos em <strong>3-5 dias úteis</strong> para capitais e <strong>5-10 dias</strong> para o interior. Frete grátis para compras acima de R$ 199,90.</p>
                         </div>
-                        <p class="h5 text-primary">R$ 109,90</p>
-                        <p class="text-muted small">12x R$ 9,16 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Base Matte 24h', 109.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Base Matte 24h', 109.90)" data-nome="Base Matte 24h">
-                            <i class="bi bi-heart"></i>
-                        </button>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Produto 3 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/corretivo.jpg" class="card-img-top" alt="Corretivo">
-                    <div class="card-body">
-                        <h5 class="card-title">Corretivo Cobertor</h5>
-                        <p class="card-text">Alta cobertura para olheiras e imperfeições.</p>
-                        <div class="mb-2">
-                            <span class="color-swatch" style="background: #f9d5bb;" title="Claro"></span>
-                            <span class="color-swatch" style="background: #e6ba95;" title="Médio"></span>
-                            <span class="color-swatch" style="background: #d4a276;" title="Escuro"></span>
+                
+                <!-- Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Posso trocar ou devolver?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <p>Aceitamos trocas e devoluções em até <strong>7 dias</strong> após o recebimento, desde que o produto esteja lacrado e com a nota fiscal.</p>
                         </div>
-                        <p class="h5 text-primary">R$ 49,90</p>
-                        <p class="text-muted small">6x R$ 8,32 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Corretivo Cobertor', 49.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Corretivo Cobertor', 49.90)" data-nome="Corretivo Cobertor">
-                            <i class="bi bi-heart"></i>
-                        </button>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Produto 4 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/iluminador.jpg" class="card-img-top" alt="Iluminador">
-                    <div class="card-body">
-                        <h5 class="card-title">Iluminador Líquido</h5>
-                        <p class="card-text">Brilho natural para realçar pontos altos.</p>
-                        <div class="mb-2">
-                            <span class="color-swatch" style="background: #f5f0e8;" title="Pérola"></span>
-                            <span class="color-swatch" style="background: #e8d8c0;" title="Dourado"></span>
-                            <span class="color-swatch" style="background: #d4c4a8;" title="Rosé"></span>
+                
+                <!-- Item 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            Como escolher meu tom de base?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <p>Use nosso <strong>guia digital</strong> ou agende uma <strong>consulta online</strong> com nossas maquiadoras. Envie uma foto em luz natural para ajudarmos!</p>
                         </div>
-                        <p class="h5 text-primary">R$ 69,90</p>
-                        <p class="text-muted small">6x R$ 11,65 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Iluminador Líquido', 69.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Iluminador Líquido', 69.90)" data-nome="Iluminador Líquido">
-                            <i class="bi bi-heart"></i>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Batons COMPLETO -->
-        <h3 class="categoria-title">Batons</h3>
-        <div class="row">
-            <!-- Produto 5 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/batom-vermelho.jpg" class="card-img-top" alt="Batom Vermelho">
-                    <div class="card-body">
-                        <h5 class="card-title">Batom Matte Vermelho</h5>
-                        <p class="card-text">Vermelho clássico para um look marcante.</p>
-                        <p class="h5 text-primary">R$ 59,90</p>
-                        <p class="text-muted small">6x R$ 9,98 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Batom Matte Vermelho', 59.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Batom Matte Vermelho', 59.90)" data-nome="Batom Matte Vermelho">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 6 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/batom-rosa.jpg" class="card-img-top" alt="Batom Rosa">
-                    <div class="card-body">
-                        <h5 class="card-title">Batom Líquido Rosa</h5>
-                        <p class="card-text">Rosa nude para um look natural e sofisticado.</p>
-                        <p class="h5 text-primary">R$ 65,90</p>
-                        <p class="text-muted small">6x R$ 10,98 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Batom Líquido Rosa', 65.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Batom Líquido Rosa', 65.90)" data-nome="Batom Líquido Rosa">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 7 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/batom-marrom.jpg" class="card-img-top" alt="Batom Marrom">
-                    <div class="card-body">
-                        <h5 class="card-title">Batom Creme Marrom</h5>
-                        <p class="card-text">Marrom terroso para um look moderno.</p>
-                        <p class="h5 text-primary">R$ 62,90</p>
-                        <p class="text-muted small">6x R$ 10,48 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Batom Creme Marrom', 62.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Batom Creme Marrom', 62.90)" data-nome="Batom Creme Marrom">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 8 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/gloss.jpg" class="card-img-top" alt="Gloss Labial">
-                    <div class="card-body">
-                        <h5 class="card-title">Gloss Labial Brilhante</h5>
-                        <p class="card-text">Brilho intenso com hidratação prolongada.</p>
-                        <p class="h5 text-primary">R$ 45,90</p>
-                        <p class="text-muted small">6x R$ 7,65 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Gloss Labial Brilhante', 45.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Gloss Labial Brilhante', 45.90)" data-nome="Gloss Labial Brilhante">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Paletas COMPLETO -->
-        <h3 class="categoria-title">Paletas</h3>
-        <div class="row">
-            <!-- Produto 9 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/paleta-sombra.jpg" class="card-img-top" alt="Paleta de Sombras">
-                    <div class="card-body">
-                        <h5 class="card-title">Paleta de Sombras Nude</h5>
-                        <p class="card-text">12 tons neutros para looks do dia a noite.</p>
-                        <p class="h5 text-primary">R$ 129,90</p>
-                        <p class="text-muted small">12x R$ 10,82 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Paleta de Sombras Nude', 129.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Paleta de Sombras Nude', 129.90)" data-nome="Paleta de Sombras Nude">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 10 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/paleta-colorida.jpg" class="card-img-top" alt="Paleta Colorida">
-                    <div class="card-body">
-                        <h5 class="card-title">Paleta de Sombras Colorida</h5>
-                        <p class="card-text">15 cores vibrantes para looks criativos.</p>
-                        <p class="h5 text-primary">R$ 149,90</p>
-                        <p class="text-muted small">12x R$ 12,49 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Paleta de Sombras Colorida', 149.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Paleta de Sombras Colorida', 149.90)" data-nome="Paleta de Sombras Colorida">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 11 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/paleta-blush.jpg" class="card-img-top" alt="Paleta de Blush">
-                    <div class="card-body">
-                        <h5 class="card-title">Paleta de Blush</h5>
-                        <p class="card-text">6 tons de blush em pó para diferentes looks.</p>
-                        <p class="h5 text-primary">R$ 89,90</p>
-                        <p class="text-muted small">6x R$ 14,98 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Paleta de Blush', 89.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Paleta de Blush', 89.90)" data-nome="Paleta de Blush">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 12 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/paleta-contorno.jpg" class="card-img-top" alt="Paleta de Contorno">
-                    <div class="card-body">
-                        <h5 class="card-title">Paleta de Contorno</h5>
-                        <p class="card-text">Contorno, iluminação e correção em uma paleta.</p>
-                        <p class="h5 text-primary">R$ 119,90</p>
-                        <p class="text-muted small">12x R$ 9,99 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Paleta de Contorno', 119.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Paleta de Contorno', 119.90)" data-nome="Paleta de Contorno">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Pincéis COMPLETO -->
-        <h3 class="categoria-title">Pincéis e Acessórios</h3>
-        <div class="row">
-            <!-- Produto 13 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/kit-pinceis.jpg" class="card-img-top" alt="Kit de Pincéis">
-                    <div class="card-body">
-                        <h5 class="card-title">Kit Completo de Pincéis</h5>
-                        <p class="card-text">12 pincéis profissionais para maquiagem.</p>
-                        <p class="h5 text-primary">R$ 159,90</p>
-                        <p class="text-muted small">12x R$ 13,32 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Completo de Pincéis', 159.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Completo de Pincéis', 159.90)" data-nome="Kit Completo de Pincéis">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 14 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/esponja.jpg" class="card-img-top" alt="Esponja de Maquiagem">
-                    <div class="card-body">
-                        <h5 class="card-title">Esponja Beauty Blender</h5>
-                        <p class="card-text">Para aplicação perfeita de base e corretivo.</p>
-                        <p class="h5 text-primary">R$ 39,90</p>
-                        <p class="text-muted small">6x R$ 6,65 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Esponja Beauty Blender', 39.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Esponja Beauty Blender', 39.90)" data-nome="Esponja Beauty Blender">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 15 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/limpa-pinceis.jpg" class="card-img-top" alt="Limpa Pincéis">
-                    <div class="card-body">
-                        <h5 class="card-title">Shampoo para Pincéis</h5>
-                        <p class="card-text">Limpa e conserva seus pincéis como novos.</p>
-                        <p class="h5 text-primary">R$ 29,90</p>
-                        <p class="text-muted small">6x R$ 4,98 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Shampoo para Pincéis', 29.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Shampoo para Pincéis', 29.90)" data-nome="Shampoo para Pincéis">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 16 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/necessaire.jpg" class="card-img-top" alt="Necessaire">
-                    <div class="card-body">
-                        <h5 class="card-title">Necessaire Profissional</h5>
-                        <p class="card-text">Organize seus produtos com estilo.</p>
-                        <p class="h5 text-primary">R$ 79,90</p>
-                        <p class="text-muted small">6x R$ 13,32 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Necessaire Profissional', 79.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Necessaire Profissional', 79.90)" data-nome="Necessaire Profissional">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Olhos COMPLETO -->
-        <h3 class="categoria-title">Olhos</h3>
-        <div class="row">
-            <!-- Produto 17 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/mascara-cilios.jpg" class="card-img-top" alt="Máscara de Cílios">
-                    <div class="card-body">
-                        <h5 class="card-title">Máscara de Cílios Volume Extremo</h5>
-                        <p class="card-text">Proporciona volume e comprimento intenso sem aglomerar.</p>
-                        <p class="h5 text-primary">R$ 79,90</p>
-                        <p class="text-muted small">6x R$ 13,32 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Máscara de Cílios Volume Extremo', 79.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Máscara de Cílios Volume Extremo', 79.90)" data-nome="Máscara de Cílios Volume Extremo">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 18 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/delineador-liquido.jpg" class="card-img-top" alt="Delineador Líquido">
-                    <div class="card-body">
-                        <h5 class="card-title">Delineador Líquido Precision</h5>
-                        <p class="card-text">Ponta fina para traços precisos e acabamento mate.</p>
-                        <p class="h5 text-primary">R$ 59,90</p>
-                        <p class="text-muted small">6x R$ 9,98 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Delineador Líquido Precision', 59.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Delineador Líquido Precision', 59.90)" data-nome="Delineador Líquido Precision">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 19 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/sombra-liquida.jpg" class="card-img-top" alt="Sombra Líquida">
-                    <div class="card-body">
-                        <h5 class="card-title">Sombra Líquida Metálica</h5>
-                        <p class="card-text">Pigmentação intensa com efeito metalizado.</p>
-                        <div class="mb-2">
-                            <span class="color-swatch" style="background: #d4af37;" title="Dourado"></span>
-                            <span class="color-swatch" style="background: #c0c0c0;" title="Prata"></span>
-                            <span class="color-swatch" style="background: #b76e79;" title="Rosé"></span>
+    </section>
+
+    <!-- Seção de Chat Integrado Inteligente -->
+    <section id="chat" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Fale com Nossa Equipe</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h5><i class="bi bi-chat-dots me-2"></i>Chat Inteligente</h5>
                         </div>
-                        <p class="h5 text-primary">R$ 69,90</p>
-                        <p class="text-muted small">6x R$ 11,65 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Sombra Líquida Metálica', 69.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Sombra Líquida Metálica', 69.90)" data-nome="Sombra Líquida Metálica">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 20 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/sobrancelha.jpg" class="card-img-top" alt="Kit Sobrancelha">
-                    <div class="card-body">
-                        <h5 class="card-title">Kit Sobrancelha Perfeita</h5>
-                        <p class="card-text">Pó, gel e stencil para modelar sobrancelhas.</p>
-                        <div class="mb-2">
-                            <span class="color-swatch" style="background: #5c3b24;" title="Marrom Escuro"></span>
-                            <span class="color-swatch" style="background: #8b5a2b;" title="Marrom Médio"></span>
-                            <span class="color-swatch" style="background: #a67b5b;" title="Castanho"></span>
+                        <div class="card-body" style="height: 300px; overflow-y: auto;" id="chat-messages">
+                            <div class="text-center py-5" id="chat-vazio">
+                                <i class="bi bi-chat-square-text text-muted" style="font-size: 3rem;"></i>
+                                <h5 class="mt-3">Olá! Sou a Julia, assistente virtual da Velvet Bloom</h5>
+                                <p class="text-muted">Como posso te ajudar hoje? Pergunte sobre produtos, prazos ou trocas.</p>
+                            </div>
                         </div>
-                        <p class="h5 text-primary">R$ 89,90</p>
-                        <p class="text-muted small">6x R$ 14,98 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Sobrancelha Perfeita', 89.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Sobrancelha Perfeita', 89.90)" data-nome="Kit Sobrancelha Perfeita">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Skincare COMPLETO -->
-        <h3 class="categoria-title">Skincare</h3>
-        <div class="row">
-            <!-- Produto 21 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/cleanser.jpg" class="card-img-top" alt="Cleanser Facial">
-                    <div class="card-body">
-                        <h5 class="card-title">Cleanser Facial Suave</h5>
-                        <p class="card-text">Limpeza profunda sem ressecar a pele.</p>
-                        <p class="h5 text-primary">R$ 89,90</p>
-                        <p class="text-muted small">6x R$ 14,98 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Cleanser Facial Suave', 89.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Cleanser Facial Suave', 89.90)" data-nome="Cleanser Facial Suave">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 22 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/hidratante.jpg" class="card-img-top" alt="Hidratante Facial">
-                    <div class="card-body">
-                        <h5 class="card-title">Hidratante com Ácido Hialurônico</h5>
-                        <p class="card-text">Hidratação intensa por 24h.</p>
-                        <p class="h5 text-primary">R$ 129,90</p>
-                        <p class="text-muted small">12x R$ 10,82 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Hidratante com Ácido Hialurônico', 129.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Hidratante com Ácido Hialurônico', 129.90)" data-nome="Hidratante com Ácido Hialurônico">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 23 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/serum.jpg" class="card-img-top" alt="Sérum Facial">
-                    <div class="card-body">
-                        <h5 class="card-title">Sérum Vitamina C</h5>
-                        <p class="card-text">Clareamento e uniformização do tom da pele.</p>
-                        <p class="h5 text-primary">R$ 149,90</p>
-                        <p class="text-muted small">12x R$ 12,49 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Sérum Vitamina C', 149.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Sérum Vitamina C', 149.90)" data-nome="Sérum Vitamina C">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 24 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/protetor.jpg" class="card-img-top" alt="Protetor Solar">
-                    <div class="card-body">
-                        <h5 class="card-title">Protetor Solar FPS 70</h5>
-                        <p class="card-text">Proteção UVA/UVB com toque seco.</p>
-                        <p class="h5 text-primary">R$ 99,90</p>
-                        <p class="text-muted small">6x R$ 16,65 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Protetor Solar FPS 70', 99.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Protetor Solar FPS 70', 99.90)" data-nome="Protetor Solar FPS 70">
-                            <i class="bi bi-heart"></i>
-                        </button>
+                        <div class="card-footer">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Digite sua mensagem..." id="mensagem-chat">
+                                <button class="btn btn-primary" type="button" id="enviar-mensagem">
+                                    <i class="bi bi-send"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Kits COMPLETO -->
-        <h3 class="categoria-title">Kits Exclusivos</h3>
-        <div class="row">
-            <!-- Produto 25 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/kit-make.jpg" class="card-img-top" alt="Kit Maquiagem Completa">
-                    <div class="card-body">
-                        <h5 class="card-title">Kit Maquiagem Profissional</h5>
-                        <p class="card-text">Base, batom, máscara de cílios e paleta de sombras.</p>
-                        <p class="h5 text-primary">R$ 299,90 <small class="text-danger"><del>R$ 379,80</del></small></p>
-                        <p class="text-muted small">12x R$ 24,99 sem juros</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Coluna 1 -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5><i class="bi bi-flower1 me-2"></i>Velvet Bloom</h5>
+                    <p class="mt-3">Transformando autoestima através da maquiagem desde 2018.</p>
+                    <div class="mt-3">
+                        <h6>Formas de Pagamento:</h6>
+                        <img src="imagens/pagamentos.png" alt="Cartões de crédito" class="img-fluid mt-2" style="max-width: 250px;">
                     </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Maquiagem Profissional', 299.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Maquiagem Profissional', 299.90)" data-nome="Kit Maquiagem Profissional">
-                            <i class="bi bi-heart"></i>
-                        </button>
+                </div>
+                
+                <!-- Coluna 2 -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Links Úteis</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white"><i class="bi bi-chevron-right me-1"></i> Início</a></li>
+                        <li class="mb-2"><a href="#produtos" class="text-white"><i class="bi bi-chevron-right me-1"></i> Produtos</a></li>
+                        <li class="mb-2"><a href="#duvidas" class="text-white"><i class="bi bi-chevron-right me-1"></i> Dúvidas</a></li>
+                        <li class="mb-2"><a href="#chat" class="text-white"><i class="bi bi-chevron-right me-1"></i> Chat</a></li>
+                        <li class="mb-2"><a href="#" class="text-white"><i class="bi bi-chevron-right me-1"></i> Política de Trocas</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Coluna 3 -->
+                <div class="col-md-4">
+                    <h5>Contato</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Av. Paulista, 1000 - São Paulo/SP</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> (11) 4002-8922</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> contato@velvetbloom.com.br</li>
+                        <li class="mb-2"><i class="bi bi-clock me-2"></i> Seg-Sex: 9h-18h | Sáb: 9h-13h</li>
+                    </ul>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-tiktok" style="font-size: 1.5rem;"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube" style="font-size: 1.5rem;"></i></a>
                     </div>
                 </div>
             </div>
-            
-            <!-- Produto 26 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/kit-skincare.jpg" class="card-img-top" alt="Kit Skincare">
-                    <div class="card-body">
-                        <h5 class="card-title">Kit Rotina Skincare</h5>
-                        <p class="card-text">Cleanser, hidratante e protetor solar.</p>
-                        <p class="h5 text-primary">R$ 249,90 <small class="text-danger"><del>R$ 319,70</del></small></p>
-                        <p class="text-muted small">12x R$ 20,82 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Rotina Skincare', 249.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Rotina Skincare', 249.90)" data-nome="Kit Rotina Skincare">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 27 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/kit-viagem.jpg" class="card-img-top" alt="Kit Viagem">
-                    <div class="card-body">
-                        <h5 class="card-title">Kit Viagem Premium</h5>
-                        <p class="card-text">Necessaire com produtos em tamanho viagem.</p>
-                        <p class="h5 text-primary">R$ 179,90 <small class="text-danger"><del>R$ 229,90</del></small></p>
-                        <p class="text-muted small">12x R$ 14,99 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Viagem Premium', 179.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Viagem Premium', 179.90)" data-nome="Kit Viagem Premium">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produto 28 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card produto-card h-100">
-                    <img src="imagens/kit-presente.jpg" class="card-img-top" alt="Kit Presente">
-                    <div class="card-body">
-                        <h5 class="card-title">Kit Presente Luxo</h5>
-                        <p class="card-text">Embalagem premium com produtos selecionados.</p>
-                        <p class="h5 text-primary">R$ 399,90 <small class="text-danger"><del>R$ 499,90</del></small></p>
-                        <p class="text-muted small">12x R$ 33,32 sem juros</p>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Presente Luxo', 399.90)">Comprar</button>
-                        <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Presente Luxo', 399.90)" data-nome="Kit Presente Luxo">
-                            <i class="bi bi-heart"></i>
-                        </button>
-                    </div>
-                </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center">
+                <small>© 2023 Velvet Bloom. Todos os direitos reservados. CNPJ: 12.345.678/0001-99</small>
             </div>
         </div>
-    </div>
-</section>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Banco de dados usando localStorage
-        const database = {
-            init: function() {
-                if (!localStorage.getItem('velvetBloomUsers')) {
-                    localStorage.setItem('velvetBloomUsers', JSON.stringify([]));
-                }
-                
-                if (!localStorage.getItem('velvetBloomProducts')) {
-                    const products = [
-                        // ... (lista de produtos) ...
-                    ];
-                    localStorage.setItem('velvetBloomProducts', JSON.stringify(products));
-                }
-                
-                if (!localStorage.getItem('velvetBloomOrders')) {
-                    localStorage.setItem('velvetBloomOrders', JSON.stringify([]));
-                }
-            },
-            // ... (outros métodos do database) ...
-        };
-
-        // Inicializa os dados do carrinho e favoritos
-        function inicializarDados() {
-            if (!localStorage.getItem('velvetBloomCarrinho')) {
-                localStorage.setItem('velvetBloomCarrinho', JSON.stringify([]));
-            }
-            if (!localStorage.getItem('velvetBloomFavoritos')) {
-                localStorage.setItem('velvetBloomFavoritos', JSON.stringify([]));
-            }
-            return {
-                carrinho: JSON.parse(localStorage.getItem('velvetBloomCarrinho')) || [],
-                favoritos: JSON.parse(localStorage.getItem('velvetBloomFavoritos')) || []
-            };
-        }
-
-        // Variáveis globais atualizadas
-        let { carrinho, favoritos } = inicializarDados();
+        // Variáveis globais
+        let carrinho = JSON.parse(localStorage.getItem('velvetBloomCarrinho')) || [];
+        let favoritos = JSON.parse(localStorage.getItem('velvetBloomFavoritos')) || [];
 
         // Atualizar contadores
         function atualizarContadores() {
@@ -991,7 +1100,7 @@
             document.getElementById('fav-count').textContent = favCount;
         }
 
-        // Adicionar ao carrinho (versão corrigida)
+        // Adicionar ao carrinho
         function adicionarAoCarrinho(nome, preco) {
             const produtoExistente = carrinho.find(item => item.nome === nome);
             
@@ -1008,7 +1117,7 @@
             localStorage.setItem('velvetBloomCarrinho', JSON.stringify(carrinho));
             atualizarContadores();
             
-            // Feedback visual melhorado
+            // Feedback visual
             const btn = event.target.closest('.btn-comprar');
             if (btn) {
                 btn.textContent = 'Adicionado!';
@@ -1023,7 +1132,7 @@
             }
         }
 
-        // Adicionar aos favoritos (versão corrigida)
+        // Adicionar aos favoritos
         function adicionarFavorito(nome, preco) {
             const produtoExistente = favoritos.find(item => item.nome === nome);
             
@@ -1036,7 +1145,7 @@
                 localStorage.setItem('velvetBloomFavoritos', JSON.stringify(favoritos));
                 atualizarContadores();
                 
-                // Feedback visual melhorado
+                // Feedback visual
                 const btn = event.target.closest('.btn-favoritar');
                 if (btn) {
                     btn.innerHTML = '<i class="bi bi-heart-fill"></i>';
@@ -1046,7 +1155,47 @@
             }
         }
 
-        // Atualizar modal do carrinho (versão corrigida)
+        // Remover do carrinho
+        function removerDoCarrinho(index) {
+            carrinho.splice(index, 1);
+            localStorage.setItem('velvetBloomCarrinho', JSON.stringify(carrinho));
+            atualizarCarrinhoModal();
+            atualizarContadores();
+        }
+
+        // Remover dos favoritos
+        function removerDosFavoritos(index) {
+            favoritos.splice(index, 1);
+            localStorage.setItem('velvetBloomFavoritos', JSON.stringify(favoritos));
+            atualizarFavoritosModal();
+            atualizarContadores();
+            
+            // Atualizar botão de favorito na página de produtos
+            const produtoRemovido = favoritos[index];
+            if (produtoRemovido) {
+                document.querySelectorAll(`.btn-favoritar[data-nome="${produtoRemovido.nome}"]`).forEach(btn => {
+                    btn.innerHTML = '<i class="bi bi-heart"></i>';
+                    btn.classList.remove('btn-danger');
+                    btn.classList.add('btn-outline-danger');
+                });
+            }
+        }
+
+        // Atualizar quantidade no carrinho
+        function atualizarQuantidade(index, delta) {
+            const item = carrinho[index];
+            item.quantidade += delta;
+            
+            if (item.quantidade < 1) {
+                item.quantidade = 1;
+            }
+            
+            localStorage.setItem('velvetBloomCarrinho', JSON.stringify(carrinho));
+            atualizarCarrinhoModal();
+            atualizarContadores();
+        }
+
+        // Atualizar modal do carrinho
         function atualizarCarrinhoModal() {
             const carrinhoLista = document.getElementById('carrinho-lista');
             const carrinhoVazio = document.getElementById('carrinho-vazio');
@@ -1095,7 +1244,7 @@
             }
         }
 
-        // Atualizar modal de favoritos (versão corrigida)
+        // Atualizar modal de favoritos
         function atualizarFavoritosModal() {
             const favoritosVazio = document.getElementById('favoritos-vazio');
             const favoritosItens = document.getElementById('favoritos-itens');
@@ -1129,14 +1278,8 @@
             }
         }
 
-        // ... (restante do JavaScript permanece igual) ...
-
-        // Inicialização corrigida
+        // Inicialização
         document.addEventListener('DOMContentLoaded', function() {
-            // Inicializa os dados primeiro
-            database.init();
-            const { carrinho, favoritos } = inicializarDados();
-            
             // Atualiza os contadores
             atualizarContadores();
             
@@ -1152,210 +1295,166 @@
             // Configura eventos dos modais
             document.getElementById('carrinhoModal').addEventListener('show.bs.modal', atualizarCarrinhoModal);
             document.getElementById('favoritosModal').addEventListener('show.bs.modal', atualizarFavoritosModal);
+            
+            // Configura o chat inteligente
+            const respostasChat = {
+                saudações: ["Olá! 😊", "Oi! Como posso ajudar?", "Oi! Sou a Julia da Velvet Bloom. 💖"],
+                produtos: "Temos uma variedade de produtos de maquiagem profissional! Bases, batons, paletas e muito mais. Algum produto específico você está buscando?",
+                preços: "Nossos preços variam conforme o produto. Temos opções a partir de R$ 29,90. Posso te indicar algum produto específico?",
+                entrega: "Entregamos em 3-5 dias úteis para capitais e 5-10 dias para o interior. Frete grátis para compras acima de R$ 199,90!",
+                trocas: "Aceitamos trocas em até 7 dias após o recebimento, desde que o produto esteja lacrado e com nota fiscal. Precisa de ajuda com uma troca?",
+                pagamento: "Aceitamos todos os cartões, Pix e boleto. Parcelamos em até 12x sem juros no cartão!",
+                contato: "Você pode nos contatar pelo telefone (11) 4002-8922 ou email contato@velvetbloom.com.br. Horário: Seg-Sex das 9h às 18h.",
+                base: "Para escolher sua base, considere seu tipo de pele e tom. Temos 12 tonalidades! Posso te ajudar a encontrar a ideal?",
+                desconto: "Temos promoções semanais! Cadastre seu email para receber ofertas exclusivas. Algum produto específico você quer com desconto?",
+                kit: "Nossos kits combinam produtos com até 30% de desconto! Temos kits para iniciantes, profissionais e presentes.",
+                default: "Desculpe, não entendi. Poderia reformular? Estou aqui para ajudar com produtos, prazos de entrega, trocas e pagamentos."
+            };
+
+            function responderMensagem(mensagem) {
+                const msg = mensagem.toLowerCase();
+                
+                if (msg.includes('oi') || msg.includes('olá') || msg.includes('ola')) {
+                    return respostasChat.saudações[Math.floor(Math.random() * respostasChat.saudações.length)];
+                } else if (msg.includes('produto') || msg.includes('itens') || msg.includes('maquiagem')) {
+                    return respostasChat.produtos;
+                } else if (msg.includes('preço') || msg.includes('valor') || msg.includes('custa')) {
+                    return respostasChat.preços;
+                } else if (msg.includes('entrega') || msg.includes('prazo') || msg.includes('chega')) {
+                    return respostasChat.entrega;
+                } else if (msg.includes('troca') || msg.includes('devolução') || msg.includes('devolver')) {
+                    return respostasChat.trocas;
+                } else if (msg.includes('pagamento') || msg.includes('cartão') || msg.includes('pix') || msg.includes('boleto')) {
+                    return respostasChat.pagamento;
+                } else if (msg.includes('contato') || msg.includes('telefone') || msg.includes('email')) {
+                    return respostasChat.contato;
+                } else if (msg.includes('base') || msg.includes('tom') || msg.includes('cor')) {
+                    return respostasChat.base;
+                } else if (msg.includes('desconto') || msg.includes('promoção') || msg.includes('oferta')) {
+                    return respostasChat.desconto;
+                } else if (msg.includes('kit') || msg.includes('combo') || msg.includes('conjunto')) {
+                    return respostasChat.kit;
+                } else {
+                    return respostasChat.default;
+                }
+            }
+
+            document.getElementById('enviar-mensagem').addEventListener('click', function() {
+                const mensagem = document.getElementById('mensagem-chat').value.trim();
+                if (mensagem !== '') {
+                    // Esconde a mensagem inicial
+                    document.getElementById('chat-vazio').style.display = 'none';
+                    
+                    // Adiciona a mensagem do usuário
+                    const chatBox = document.getElementById('chat-messages');
+                    const horaAtual = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+                    
+                    chatBox.innerHTML += `
+                        <div class="d-flex justify-content-end mb-3">
+                            <div class="bg-primary text-white p-3 rounded-4" style="max-width: 70%;">
+                                ${mensagem}
+                                <div class="text-end small mt-1">${horaAtual}</div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Limpa o campo de mensagem
+                    document.getElementById('mensagem-chat').value = '';
+                    
+                    // Processa a mensagem e prepara a resposta inteligente
+                    const resposta = responderMensagem(mensagem);
+                    
+                    // Simula "digitando..." antes de responder
+                    chatBox.innerHTML += `
+                        <div class="d-flex justify-content-start mb-3">
+                            <div class="bg-light text-dark p-3 rounded-4" style="max-width: 70%;">
+                                <div class="typing-indicator">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                    
+                    // Resposta após um pequeno delay (simulando processamento)
+                    setTimeout(() => {
+                        // Remove o indicador de digitação
+                        chatBox.querySelector('.typing-indicator')?.parentElement?.parentElement?.remove();
+                        
+                        // Adiciona a resposta
+                        chatBox.innerHTML += `
+                            <div class="d-flex justify-content-start mb-3">
+                                <div class="bg-light text-dark p-3 rounded-4" style="max-width: 70%;">
+                                    ${resposta}
+                                    <div class="text-end small mt-1">${horaAtual}</div>
+                                </div>
+                            </div>
+                        `;
+                        
+                        // Rolagem automática para a última mensagem
+                        chatBox.scrollTop = chatBox.scrollHeight;
+                        
+                        // Sugestões rápidas para continuar a conversa
+                        if (!resposta.includes("reformular")) {
+                            chatBox.innerHTML += `
+                                <div class="text-center my-2">
+                                    <small class="text-muted">Você pode perguntar sobre:</small><br>
+                                    <button class="btn btn-sm btn-outline-primary mt-1 quick-reply" data-msg="Quais kits vocês têm?">Kits</button>
+                                    <button class="btn btn-sm btn-outline-primary mt-1 quick-reply" data-msg="Qual o prazo de entrega?">Prazos</button>
+                                    <button class="btn btn-sm btn-outline-primary mt-1 quick-reply" data-msg="Como faço para trocar um produto?">Trocas</button>
+                                </div>
+                            `;
+                            
+                            // Adiciona eventos aos botões de resposta rápida
+                            document.querySelectorAll('.quick-reply').forEach(btn => {
+                                btn.addEventListener('click', function() {
+                                    document.getElementById('mensagem-chat').value = this.getAttribute('data-msg');
+                                    document.getElementById('enviar-mensagem').click();
+                                });
+                            });
+                        }
+                    }, 1500);
+                }
+            });
+
+            // Enviar mensagem ao pressionar Enter
+            document.getElementById('mensagem-chat').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('enviar-mensagem').click();
+                }
+            });
+
+            // Estilo para o indicador de digitação
+            const style = document.createElement('style');
+            style.textContent = `
+                .typing-indicator {
+                    display: inline-flex;
+                    padding: 8px;
+                }
+                .typing-indicator span {
+                    height: 8px;
+                    width: 8px;
+                    background-color: #6c757d;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin: 0 2px;
+                    animation: typing 1s infinite ease-in-out;
+                }
+                .typing-indicator span:nth-child(2) {
+                    animation-delay: 0.2s;
+                }
+                .typing-indicator span:nth-child(3) {
+                    animation-delay: 0.4s;
+                }
+                @keyframes typing {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-5px); }
+                }
+            `;
+            document.head.appendChild(style);
         });
     </script>
-<!-- ... (Todo o cabeçalho, CSS e seção de produtos permanecem iguais) ... -->
-
-<!-- Seção de Dúvidas Frequentes COMPLETA -->
-<section id="duvidas" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center section-title">Dúvidas Frequentes</h2>
-        
-        <div class="accordion" id="accordionFAQ">
-            <!-- Item 1 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                        Como faço para comprar?
-                    </button>
-                </h2>
-                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body">
-                        <p>Navegue pelos nossos produtos, selecione os itens desejados e clique em <strong>"Comprar"</strong>. Acompanhe seu pedido no <strong>carrinho</strong> e finalize quando estiver pronto!</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Item 2 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                        Qual o prazo de entrega?
-                    </button>
-                </h2>
-                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body">
-                        <p>Entregamos em <strong>3-5 dias úteis</strong> para capitais e <strong>5-10 dias</strong> para o interior. Frete grátis para compras acima de R$ 199,90.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Item 3 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                        Posso trocar ou devolver?
-                    </button>
-                </h2>
-                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body">
-                        <p>Aceitamos trocas e devoluções em até <strong>7 dias</strong> após o recebimento, desde que o produto esteja lacrado e com a nota fiscal.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Item 4 -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                        Como escolher meu tom de base?
-                    </button>
-                </h2>
-                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body">
-                        <p>Use nosso <strong>guia digital</strong> ou agende uma <strong>consulta online</strong> com nossas maquiadoras. Envie uma foto em luz natural para ajudarmos!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Seção de Chat Integrado -->
-<section id="chat" class="py-5">
-    <div class="container">
-        <h2 class="text-center section-title">Fale com Nossa Equipe</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        <h5><i class="bi bi-chat-dots me-2"></i>Chat Online</h5>
-                    </div>
-                    <div class="card-body" style="height: 300px; overflow-y: auto;" id="chat-messages">
-                        <!-- Mensagens aparecerão aqui -->
-                        <div class="text-center py-5" id="chat-vazio">
-                            <i class="bi bi-chat-square-text text-muted" style="font-size: 3rem;"></i>
-                            <h5 class="mt-3">Inicie uma conversa</h5>
-                            <p class="text-muted">Nossa equipe responderá em instantes</p>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Digite sua mensagem..." id="mensagem-chat">
-                            <button class="btn btn-primary" type="button" id="enviar-mensagem">
-                                <i class="bi bi-send"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer COMPLETO -->
-<footer class="bg-dark text-white py-4">
-    <div class="container">
-        <div class="row">
-            <!-- Coluna 1 -->
-            <div class="col-md-4 mb-4 mb-md-0">
-                <h5><i class="bi bi-flower1 me-2"></i>Velvet Bloom</h5>
-                <p class="mt-3">Transformando autoestima através da maquiagem desde 2018.</p>
-                <div class="mt-3">
-                    <h6>Formas de Pagamento:</h6>
-                    <img src="imagens/pagamentos.png" alt="Cartões de crédito" class="img-fluid mt-2" style="max-width: 250px;">
-                </div>
-            </div>
-            
-            <!-- Coluna 2 -->
-            <div class="col-md-4 mb-4 mb-md-0">
-                <h5>Links Úteis</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#home" class="text-white"><i class="bi bi-chevron-right me-1"></i> Início</a></li>
-                    <li class="mb-2"><a href="#produtos" class="text-white"><i class="bi bi-chevron-right me-1"></i> Produtos</a></li>
-                    <li class="mb-2"><a href="#duvidas" class="text-white"><i class="bi bi-chevron-right me-1"></i> Dúvidas</a></li>
-                    <li class="mb-2"><a href="#chat" class="text-white"><i class="bi bi-chevron-right me-1"></i> Chat</a></li>
-                    <li class="mb-2"><a href="#" class="text-white"><i class="bi bi-chevron-right me-1"></i> Política de Trocas</a></li>
-                </ul>
-            </div>
-            
-            <!-- Coluna 3 -->
-            <div class="col-md-4">
-                <h5>Contato</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Av. Paulista, 1000 - São Paulo/SP</li>
-                    <li class="mb-2"><i class="bi bi-telephone me-2"></i> (11) 4002-8922</li>
-                    <li class="mb-2"><i class="bi bi-envelope me-2"></i> contato@velvetbloom.com.br</li>
-                    <li class="mb-2"><i class="bi bi-clock me-2"></i> Seg-Sex: 9h-18h | Sáb: 9h-13h</li>
-                </ul>
-                <div class="social-links mt-3">
-                    <a href="#" class="text-white me-3"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
-                    <a href="#" class="text-white me-3"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
-                    <a href="#" class="text-white me-3"><i class="bi bi-tiktok" style="font-size: 1.5rem;"></i></a>
-                    <a href="#" class="text-white"><i class="bi bi-youtube" style="font-size: 1.5rem;"></i></a>
-                </div>
-            </div>
-        </div>
-        <hr class="my-4 bg-secondary">
-        <div class="text-center">
-            <small>© 2023 Velvet Bloom. Todos os direitos reservados. CNPJ: 12.345.678/0001-99</small>
-        </div>
-    </div>
-</footer>
-
-<!-- JavaScript Adicional para o Chat -->
-<script>
-    // Função do Chat
-    document.getElementById('enviar-mensagem').addEventListener('click', function() {
-        const mensagem = document.getElementById('mensagem-chat').value;
-        if (mensagem.trim() !== '') {
-            // Esconde a mensagem inicial
-            document.getElementById('chat-vazio').style.display = 'none';
-            
-            // Adiciona a mensagem do usuário
-            const chatBox = document.getElementById('chat-messages');
-            chatBox.innerHTML += `
-                <div class="d-flex justify-content-end mb-3">
-                    <div class="bg-primary text-white p-3 rounded-4" style="max-width: 70%;">
-                        ${mensagem}
-                        <div class="text-end small mt-1">Agora</div>
-                    </div>
-                </div>
-            `;
-            
-            // Limpa o campo de mensagem
-            document.getElementById('mensagem-chat').value = '';
-            
-            // Simula resposta após 2 segundos
-            setTimeout(() => {
-                chatBox.innerHTML += `
-                    <div class="d-flex justify-content-start mb-3">
-                        <div class="bg-light text-dark p-3 rounded-4" style="max-width: 70%;">
-                            Olá! Aqui é a Julia da Velvet Bloom. Como posso te ajudar? 😊
-                            <div class="text-end small mt-1">Agora</div>
-                        </div>
-                    </div>
-                `;
-                // Rolagem automática para a última mensagem
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }, 2000);
-            
-            // Rolagem automática
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-    });
-
-    // Enviar mensagem ao pressionar Enter
-    document.getElementById('mensagem-chat').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            document.getElementById('enviar-mensagem').click();
-        }
-    });
-</script>
-
-<!-- ... (Restante do JavaScript permanece igual) ... -->
-
-
-
 </body>
 </html>
