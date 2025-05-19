@@ -90,6 +90,17 @@
             border-radius: 50%;
             margin-right: 5px;
             border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        
+        .color-swatch.selected {
+            transform: scale(1.2);
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
+        
+        .color-option {
+            margin-bottom: 10px;
         }
         
         .categoria-title {
@@ -146,6 +157,12 @@
             justify-content: center;
             margin-left: 10px;
             font-size: 14px;
+        }
+        
+        .selected-color-display {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -220,6 +237,7 @@
                                 <thead>
                                     <tr>
                                         <th>Produto</th>
+                                        <th>Cor</th>
                                         <th>Preço</th>
                                         <th>Quantidade</th>
                                         <th>Total</th>
@@ -355,17 +373,20 @@
                             <h5 class="card-title">Base Líquida HD</h5>
                             <p class="card-text">Cobertura buildable e acabamento natural.</p>
                             <div class="mb-2">
-                                <span class="color-swatch" style="background: #f5d0b9;" title="Bege Claro"></span>
-                                <span class="color-swatch" style="background: #e3b18b;" title="Bege Médio"></span>
-                                <span class="color-swatch" style="background: #d2a279;" title="Bege Escuro"></span>
-                                <span class="color-swatch" style="background: #8d5524;" title="Marrom Claro"></span>
+                                <div class="color-option">
+                                    <span class="color-swatch" style="background: #f5d0b9;" title="Bege Claro" data-cor="Bege Claro" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #e3b18b;" title="Bege Médio" data-cor="Bege Médio" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #d2a279;" title="Bege Escuro" data-cor="Bege Escuro" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #8d5524;" title="Marrom Claro" data-cor="Marrom Claro" onclick="selecionarCor(this)"></span>
+                                </div>
+                                <div class="selected-color-display" id="cor-selecionada-Base Líquida HD">Nenhuma cor selecionada</div>
                             </div>
                             <p class="h5 text-primary">R$ 99,90</p>
                             <p class="text-muted small">12x R$ 8,32 sem juros</p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Base Líquida HD', 99.90)">Comprar</button>
-                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Base Líquida HD', 99.90)" data-nome="Base Líquida HD">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Base Líquida HD', 99.90, 'cor-selecionada-Base Líquida HD')">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Base Líquida HD', 99.90, 'cor-selecionada-Base Líquida HD')" data-nome="Base Líquida HD">
                                 <i class="bi bi-heart"></i>
                             </button>
                         </div>
@@ -380,17 +401,20 @@
                             <h5 class="card-title">Base Matte 24h</h5>
                             <p class="card-text">Controle de oleosidade e longa duração.</p>
                             <div class="mb-2">
-                                <span class="color-swatch" style="background: #f3e9d2;" title="Clara"></span>
-                                <span class="color-swatch" style="background: #e8d5b5;" title="Média"></span>
-                                <span class="color-swatch" style="background: #d4b38f;" title="Escura"></span>
-                                <span class="color-swatch" style="background: #a87c52;" title="Marrom"></span>
+                                <div class="color-option">
+                                    <span class="color-swatch" style="background: #f3e9d2;" title="Clara" data-cor="Clara" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #e8d5b5;" title="Média" data-cor="Média" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #d4b38f;" title="Escura" data-cor="Escura" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #a87c52;" title="Marrom" data-cor="Marrom" onclick="selecionarCor(this)"></span>
+                                </div>
+                                <div class="selected-color-display" id="cor-selecionada-Base Matte 24h">Nenhuma cor selecionada</div>
                             </div>
                             <p class="h5 text-primary">R$ 109,90</p>
                             <p class="text-muted small">12x R$ 9,16 sem juros</p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Base Matte 24h', 109.90)">Comprar</button>
-                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Base Matte 24h', 109.90)" data-nome="Base Matte 24h">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Base Matte 24h', 109.90, 'cor-selecionada-Base Matte 24h')">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Base Matte 24h', 109.90, 'cor-selecionada-Base Matte 24h')" data-nome="Base Matte 24h">
                                 <i class="bi bi-heart"></i>
                             </button>
                         </div>
@@ -405,16 +429,19 @@
                             <h5 class="card-title">Corretivo Cobertor</h5>
                             <p class="card-text">Alta cobertura para olheiras e imperfeições.</p>
                             <div class="mb-2">
-                                <span class="color-swatch" style="background: #f9d5bb;" title="Claro"></span>
-                                <span class="color-swatch" style="background: #e6ba95;" title="Médio"></span>
-                                <span class="color-swatch" style="background: #d4a276;" title="Escuro"></span>
+                                <div class="color-option">
+                                    <span class="color-swatch" style="background: #f9d5bb;" title="Claro" data-cor="Claro" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #e6ba95;" title="Médio" data-cor="Médio" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #d4a276;" title="Escuro" data-cor="Escuro" onclick="selecionarCor(this)"></span>
+                                </div>
+                                <div class="selected-color-display" id="cor-selecionada-Corretivo Cobertor">Nenhuma cor selecionada</div>
                             </div>
                             <p class="h5 text-primary">R$ 49,90</p>
                             <p class="text-muted small">6x R$ 8,32 sem juros</p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Corretivo Cobertor', 49.90)">Comprar</button>
-                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Corretivo Cobertor', 49.90)" data-nome="Corretivo Cobertor">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Corretivo Cobertor', 49.90, 'cor-selecionada-Corretivo Cobertor')">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Corretivo Cobertor', 49.90, 'cor-selecionada-Corretivo Cobertor')" data-nome="Corretivo Cobertor">
                                 <i class="bi bi-heart"></i>
                             </button>
                         </div>
@@ -429,16 +456,19 @@
                             <h5 class="card-title">Iluminador Líquido</h5>
                             <p class="card-text">Brilho natural para realçar pontos altos.</p>
                             <div class="mb-2">
-                                <span class="color-swatch" style="background: #f5f0e8;" title="Pérola"></span>
-                                <span class="color-swatch" style="background: #e8d8c0;" title="Dourado"></span>
-                                <span class="color-swatch" style="background: #d4c4a8;" title="Rosé"></span>
+                                <div class="color-option">
+                                    <span class="color-swatch" style="background: #f5f0e8;" title="Pérola" data-cor="Pérola" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #e8d8c0;" title="Dourado" data-cor="Dourado" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #d4c4a8;" title="Rosé" data-cor="Rosé" onclick="selecionarCor(this)"></span>
+                                </div>
+                                <div class="selected-color-display" id="cor-selecionada-Iluminador Líquido">Nenhuma cor selecionada</div>
                             </div>
                             <p class="h5 text-primary">R$ 69,90</p>
                             <p class="text-muted small">6x R$ 11,65 sem juros</p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Iluminador Líquido', 69.90)">Comprar</button>
-                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Iluminador Líquido', 69.90)" data-nome="Iluminador Líquido">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Iluminador Líquido', 69.90, 'cor-selecionada-Iluminador Líquido')">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Iluminador Líquido', 69.90, 'cor-selecionada-Iluminador Líquido')" data-nome="Iluminador Líquido">
                                 <i class="bi bi-heart"></i>
                             </button>
                         </div>
@@ -456,12 +486,20 @@
                         <div class="card-body">
                             <h5 class="card-title">Batom Matte Vermelho</h5>
                             <p class="card-text">Vermelho clássico para um look marcante.</p>
+                            <div class="mb-2">
+                                <div class="color-option">
+                                    <span class="color-swatch" style="background: #cc0000;" title="Vermelho Clássico" data-cor="Vermelho Clássico" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #990000;" title="Vermelho Vinho" data-cor="Vermelho Vinho" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #ff3333;" title="Vermelho Ruby" data-cor="Vermelho Ruby" onclick="selecionarCor(this)"></span>
+                                </div>
+                                <div class="selected-color-display" id="cor-selecionada-Batom Matte Vermelho">Nenhuma cor selecionada</div>
+                            </div>
                             <p class="h5 text-primary">R$ 59,90</p>
                             <p class="text-muted small">6x R$ 9,98 sem juros</p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Batom Matte Vermelho', 59.90)">Comprar</button>
-                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Batom Matte Vermelho', 59.90)" data-nome="Batom Matte Vermelho">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Batom Matte Vermelho', 59.90, 'cor-selecionada-Batom Matte Vermelho')">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Batom Matte Vermelho', 59.90, 'cor-selecionada-Batom Matte Vermelho')" data-nome="Batom Matte Vermelho">
                                 <i class="bi bi-heart"></i>
                             </button>
                         </div>
@@ -475,12 +513,20 @@
                         <div class="card-body">
                             <h5 class="card-title">Batom Líquido Rosa</h5>
                             <p class="card-text">Rosa nude para um look natural e sofisticado.</p>
+                            <div class="mb-2">
+                                <div class="color-option">
+                                    <span class="color-swatch" style="background: #ffb6c1;" title="Rosa Bebê" data-cor="Rosa Bebê" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #db7093;" title="Rosa Pálido" data-cor="Rosa Pálido" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #c71585;" title="Rosa Médio" data-cor="Rosa Médio" onclick="selecionarCor(this)"></span>
+                                </div>
+                                <div class="selected-color-display" id="cor-selecionada-Batom Líquido Rosa">Nenhuma cor selecionada</div>
+                            </div>
                             <p class="h5 text-primary">R$ 65,90</p>
                             <p class="text-muted small">6x R$ 10,98 sem juros</p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Batom Líquido Rosa', 65.90)">Comprar</button>
-                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Batom Líquido Rosa', 65.90)" data-nome="Batom Líquido Rosa">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Batom Líquido Rosa', 65.90, 'cor-selecionada-Batom Líquido Rosa')">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Batom Líquido Rosa', 65.90, 'cor-selecionada-Batom Líquido Rosa')" data-nome="Batom Líquido Rosa">
                                 <i class="bi bi-heart"></i>
                             </button>
                         </div>
@@ -494,12 +540,20 @@
                         <div class="card-body">
                             <h5 class="card-title">Batom Creme Marrom</h5>
                             <p class="card-text">Marrom terroso para um look moderno.</p>
+                            <div class="mb-2">
+                                <div class="color-option">
+                                    <span class="color-swatch" style="background: #8b4513;" title="Marrom Chocolate" data-cor="Marrom Chocolate" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #a0522d;" title="Marrom Terra" data-cor="Marrom Terra" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #d2691e;" title="Marrom Claro" data-cor="Marrom Claro" onclick="selecionarCor(this)"></span>
+                                </div>
+                                <div class="selected-color-display" id="cor-selecionada-Batom Creme Marrom">Nenhuma cor selecionada</div>
+                            </div>
                             <p class="h5 text-primary">R$ 62,90</p>
                             <p class="text-muted small">6x R$ 10,48 sem juros</p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Batom Creme Marrom', 62.90)">Comprar</button>
-                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Batom Creme Marrom', 62.90)" data-nome="Batom Creme Marrom">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Batom Creme Marrom', 62.90, 'cor-selecionada-Batom Creme Marrom')">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Batom Creme Marrom', 62.90, 'cor-selecionada-Batom Creme Marrom')" data-nome="Batom Creme Marrom">
                                 <i class="bi bi-heart"></i>
                             </button>
                         </div>
@@ -513,12 +567,20 @@
                         <div class="card-body">
                             <h5 class="card-title">Gloss Labial Brilhante</h5>
                             <p class="card-text">Brilho intenso com hidratação prolongada.</p>
+                            <div class="mb-2">
+                                <div class="color-option">
+                                    <span class="color-swatch" style="background: #ff69b4;" title="Rosa Choque" data-cor="Rosa Choque" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #ff1493;" title="Rosa Profundo" data-cor="Rosa Profundo" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #ffc0cb;" title="Rosa Translúcido" data-cor="Rosa Translúcido" onclick="selecionarCor(this)"></span>
+                                </div>
+                                <div class="selected-color-display" id="cor-selecionada-Gloss Labial Brilhante">Nenhuma cor selecionada</div>
+                            </div>
                             <p class="h5 text-primary">R$ 45,90</p>
                             <p class="text-muted small">6x R$ 7,65 sem juros</p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Gloss Labial Brilhante', 45.90)">Comprar</button>
-                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Gloss Labial Brilhante', 45.90)" data-nome="Gloss Labial Brilhante">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Gloss Labial Brilhante', 45.90, 'cor-selecionada-Gloss Labial Brilhante')">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Gloss Labial Brilhante', 45.90, 'cor-selecionada-Gloss Labial Brilhante')" data-nome="Gloss Labial Brilhante">
                                 <i class="bi bi-heart"></i>
                             </button>
                         </div>
@@ -635,12 +697,20 @@
                         <div class="card-body">
                             <h5 class="card-title">Esponja Beauty Blender</h5>
                             <p class="card-text">Para aplicação perfeita de base e corretivo.</p>
+                            <div class="mb-2">
+                                <div class="color-option">
+                                    <span class="color-swatch" style="background: #ff9999;" title="Rosa" data-cor="Rosa" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #99ccff;" title="Azul" data-cor="Azul" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #99ff99;" title="Verde" data-cor="Verde" onclick="selecionarCor(this)"></span>
+                                </div>
+                                <div class="selected-color-display" id="cor-selecionada-Esponja Beauty Blender">Nenhuma cor selecionada</div>
+                            </div>
                             <p class="h5 text-primary">R$ 39,90</p>
                             <p class="text-muted small">6x R$ 6,65 sem juros</p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Esponja Beauty Blender', 39.90)">Comprar</button>
-                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Esponja Beauty Blender', 39.90)" data-nome="Esponja Beauty Blender">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Esponja Beauty Blender', 39.90, 'cor-selecionada-Esponja Beauty Blender')">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Esponja Beauty Blender', 39.90, 'cor-selecionada-Esponja Beauty Blender')" data-nome="Esponja Beauty Blender">
                                 <i class="bi bi-heart"></i>
                             </button>
                         </div>
@@ -673,12 +743,20 @@
                         <div class="card-body">
                             <h5 class="card-title">Necessaire Profissional</h5>
                             <p class="card-text">Organize seus produtos com estilo.</p>
+                            <div class="mb-2">
+                                <div class="color-option">
+                                    <span class="color-swatch" style="background: #000000;" title="Preto" data-cor="Preto" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #c0c0c0;" title="Prata" data-cor="Prata" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #8b4513;" title="Marrom" data-cor="Marrom" onclick="selecionarCor(this)"></span>
+                                </div>
+                                <div class="selected-color-display" id="cor-selecionada-Necessaire Profissional">Nenhuma cor selecionada</div>
+                            </div>
                             <p class="h5 text-primary">R$ 79,90</p>
                             <p class="text-muted small">6x R$ 13,32 sem juros</p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Necessaire Profissional', 79.90)">Comprar</button>
-                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Necessaire Profissional', 79.90)" data-nome="Necessaire Profissional">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Necessaire Profissional', 79.90, 'cor-selecionada-Necessaire Profissional')">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Necessaire Profissional', 79.90, 'cor-selecionada-Necessaire Profissional')" data-nome="Necessaire Profissional">
                                 <i class="bi bi-heart"></i>
                             </button>
                         </div>
@@ -715,12 +793,20 @@
                         <div class="card-body">
                             <h5 class="card-title">Delineador Líquido Precision</h5>
                             <p class="card-text">Ponta fina para traços precisos e acabamento mate.</p>
+                            <div class="mb-2">
+                                <div class="color-option">
+                                    <span class="color-swatch" style="background: #000000;" title="Preto" data-cor="Preto" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #663300;" title="Marrom" data-cor="Marrom" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #333333;" title="Cinza" data-cor="Cinza" onclick="selecionarCor(this)"></span>
+                                </div>
+                                <div class="selected-color-display" id="cor-selecionada-Delineador Líquido Precision">Nenhuma cor selecionada</div>
+                            </div>
                             <p class="h5 text-primary">R$ 59,90</p>
                             <p class="text-muted small">6x R$ 9,98 sem juros</p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Delineador Líquido Precision', 59.90)">Comprar</button>
-                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Delineador Líquido Precision', 59.90)" data-nome="Delineador Líquido Precision">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Delineador Líquido Precision', 59.90, 'cor-selecionada-Delineador Líquido Precision')">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Delineador Líquido Precision', 59.90, 'cor-selecionada-Delineador Líquido Precision')" data-nome="Delineador Líquido Precision">
                                 <i class="bi bi-heart"></i>
                             </button>
                         </div>
@@ -735,16 +821,19 @@
                             <h5 class="card-title">Sombra Líquida Metálica</h5>
                             <p class="card-text">Pigmentação intensa com efeito metalizado.</p>
                             <div class="mb-2">
-                                <span class="color-swatch" style="background: #d4af37;" title="Dourado"></span>
-                                <span class="color-swatch" style="background: #c0c0c0;" title="Prata"></span>
-                                <span class="color-swatch" style="background: #b76e79;" title="Rosé"></span>
+                                <div class="color-option">
+                                    <span class="color-swatch" style="background: #d4af37;" title="Dourado" data-cor="Dourado" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #c0c0c0;" title="Prata" data-cor="Prata" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #b76e79;" title="Rosé" data-cor="Rosé" onclick="selecionarCor(this)"></span>
+                                </div>
+                                <div class="selected-color-display" id="cor-selecionada-Sombra Líquida Metálica">Nenhuma cor selecionada</div>
                             </div>
                             <p class="h5 text-primary">R$ 69,90</p>
                             <p class="text-muted small">6x R$ 11,65 sem juros</p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Sombra Líquida Metálica', 69.90)">Comprar</button>
-                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Sombra Líquida Metálica', 69.90)" data-nome="Sombra Líquida Metálica">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Sombra Líquida Metálica', 69.90, 'cor-selecionada-Sombra Líquida Metálica')">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Sombra Líquida Metálica', 69.90, 'cor-selecionada-Sombra Líquida Metálica')" data-nome="Sombra Líquida Metálica">
                                 <i class="bi bi-heart"></i>
                             </button>
                         </div>
@@ -759,16 +848,19 @@
                             <h5 class="card-title">Kit Sobrancelha Perfeita</h5>
                             <p class="card-text">Pó, gel e stencil para modelar sobrancelhas.</p>
                             <div class="mb-2">
-                                <span class="color-swatch" style="background: #5c3b24;" title="Marrom Escuro"></span>
-                                <span class="color-swatch" style="background: #8b5a2b;" title="Marrom Médio"></span>
-                                <span class="color-swatch" style="background: #a67b5b;" title="Castanho"></span>
+                                <div class="color-option">
+                                    <span class="color-swatch" style="background: #5c3b24;" title="Marrom Escuro" data-cor="Marrom Escuro" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #8b5a2b;" title="Marrom Médio" data-cor="Marrom Médio" onclick="selecionarCor(this)"></span>
+                                    <span class="color-swatch" style="background: #a67b5b;" title="Castanho" data-cor="Castanho" onclick="selecionarCor(this)"></span>
+                                </div>
+                                <div class="selected-color-display" id="cor-selecionada-Kit Sobrancelha Perfeita">Nenhuma cor selecionada</div>
                             </div>
                             <p class="h5 text-primary">R$ 89,90</p>
                             <p class="text-muted small">6x R$ 14,98 sem juros</p>
                         </div>
                         <div class="card-footer bg-white border-0">
-                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Sobrancelha Perfeita', 89.90)">Comprar</button>
-                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Sobrancelha Perfeita', 89.90)" data-nome="Kit Sobrancelha Perfeita">
+                            <button class="btn btn-outline-primary btn-sm btn-comprar" onclick="adicionarAoCarrinho('Kit Sobrancelha Perfeita', 89.90, 'cor-selecionada-Kit Sobrancelha Perfeita')">Comprar</button>
+                            <button class="btn btn-outline-danger btn-sm btn-favoritar float-end" onclick="adicionarFavorito('Kit Sobrancelha Perfeita', 89.90, 'cor-selecionada-Kit Sobrancelha Perfeita')" data-nome="Kit Sobrancelha Perfeita">
                                 <i class="bi bi-heart"></i>
                             </button>
                         </div>
@@ -1003,6 +1095,281 @@
         </div>
     </section>
 
+
+    <!-- Adicione esta seção ANTES da seção do Chat -->
+<section id="tom-perfeito" class="py-5" style="background: linear-gradient(to bottom, #fff5f9, #ffffff);">
+    <div class="container">
+        <h2 class="text-center mb-4" style="position: relative; display: inline-block; margin: 0 auto;">
+            <span style="color: #d63384;">Encontre Seu Tom Perfeito</span>
+            <span style="position: absolute; bottom: -10px; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #d63384, #ff6b9e); border-radius: 3px;"></span>
+        </h2>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card border-0 shadow-lg" style="border-radius: 15px; overflow: hidden;">
+                    <div class="card-header py-3" style="background: linear-gradient(135deg, #d63384 0%, #9c27b0 100%); color: white;">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-magic" style="font-size: 1.5rem; margin-right: 10px;"></i>
+                            <h4 class="mb-0">Assistente de Tom Inteligente</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body p-4">
+                        <form id="tom-form">
+                            <!-- Passo 1 - Tom de Pele -->
+                            <div class="mb-4">
+                                <h5 class="mb-3" style="color: #d63384;">
+                                    <span class="badge rounded-circle me-2" style="background-color: #d63384; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center;">1</span>
+                                    Qual seu tom de pele?
+                                </h5>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <input type="radio" class="btn-check" name="tom-pele" id="tom-claro" value="claro" autocomplete="off">
+                                    <label class="btn btn-outline-primary rounded-pill px-4 py-2" for="tom-claro" style="border-width: 2px; font-weight: 500;">
+                                        <i class="bi bi-droplet-half me-1" style="color: #f8d7da;"></i> Claro
+                                    </label>
+
+                                    <input type="radio" class="btn-check" name="tom-pele" id="tom-medio" value="médio" autocomplete="off">
+                                    <label class="btn btn-outline-primary rounded-pill px-4 py-2" for="tom-medio" style="border-width: 2px; font-weight: 500;">
+                                        <i class="bi bi-droplet me-1" style="color: #e9a8b6;"></i> Médio
+                                    </label>
+
+                                    <input type="radio" class="btn-check" name="tom-pele" id="tom-escuro" value="escuro" autocomplete="off">
+                                    <label class="btn btn-outline-primary rounded-pill px-4 py-2" for="tom-escuro" style="border-width: 2px; font-weight: 500;">
+                                        <i class="bi bi-droplet-fill me-1" style="color: #d63384;"></i> Escuro
+                                    </label>
+
+                                    <input type="radio" class="btn-check" name="tom-pele" id="tom-muito-escuro" value="muito escuro" autocomplete="off">
+                                    <label class="btn btn-outline-primary rounded-pill px-4 py-2" for="tom-muito-escuro" style="border-width: 2px; font-weight: 500;">
+                                        <i class="bi bi-droplet-fill me-1" style="color: #8a2be2;"></i> Muito Escuro
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Passo 2 - Subtom -->
+                            <div class="mb-4">
+                                <h5 class="mb-3" style="color: #d63384;">
+                                    <span class="badge rounded-circle me-2" style="background-color: #d63384; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center;">2</span>
+                                    Qual seu subtom?
+                                </h5>
+                                <div class="d-flex flex-wrap gap-2 mb-2">
+                                    <input type="radio" class="btn-check" name="subtom" id="subtom-quente" value="quente" autocomplete="off">
+                                    <label class="btn btn-outline-warning rounded-pill px-4 py-2" for="subtom-quente" style="border-width: 2px; font-weight: 500;">
+                                        <i class="bi bi-sun-fill me-1" style="color: #ff9500;"></i> Quente
+                                    </label>
+
+                                    <input type="radio" class="btn-check" name="subtom" id="subtom-frio" value="frio" autocomplete="off">
+                                    <label class="btn btn-outline-info rounded-pill px-4 py-2" for="subtom-frio" style="border-width: 2px; font-weight: 500;">
+                                        <i class="bi bi-snow me-1" style="color: #00b4d8;"></i> Frio
+                                    </label>
+
+                                    <input type="radio" class="btn-check" name="subtom" id="subtom-neutro" value="neutro" autocomplete="off">
+                                    <label class="btn btn-outline-secondary rounded-pill px-4 py-2" for="subtom-neutro" style="border-width: 2px; font-weight: 500;">
+                                        <i class="bi bi-circle-half me-1"></i> Neutro
+                                    </label>
+                                </div>
+                                <small class="text-muted">
+                                    <i class="bi bi-lightbulb"></i> Dica: Veja os veios do pulso - verdes (quente), azuis (frio) ou indefinidos (neutro).
+                                </small>
+                            </div>
+
+                            <!-- Passo 3 - Cobertura -->
+                            <div class="mb-4">
+                                <h5 class="mb-3" style="color: #d63384;">
+                                    <span class="badge rounded-circle me-2" style="background-color: #d63384; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center;">3</span>
+                                    Tipo de cobertura:
+                                </h5>
+                                <div class="btn-group w-100 shadow-sm" role="group">
+                                    <input type="radio" class="btn-check" name="cobertura" id="cobertura-leve" value="leve" autocomplete="off">
+                                    <label class="btn btn-outline-light text-dark py-2" for="cobertura-leve" style="border: 1px solid #dee2e6; font-weight: 500;">
+                                        <i class="bi bi-droplet me-1" style="color: #a3d2ff;"></i> Leve
+                                    </label>
+
+                                    <input type="radio" class="btn-check" name="cobertura" id="cobertura-media" value="media" autocomplete="off" checked>
+                                    <label class="btn btn-outline-light text-dark py-2" for="cobertura-media" style="border: 1px solid #dee2e6; font-weight: 500;">
+                                        <i class="bi bi-droplet me-1" style="color: #5fa8ff;"></i> Média
+                                    </label>
+
+                                    <input type="radio" class="btn-check" name="cobertura" id="cobertura-alta" value="alta" autocomplete="off">
+                                    <label class="btn btn-outline-light text-dark py-2" for="cobertura-alta" style="border: 1px solid #dee2e6; font-weight: 500;">
+                                        <i class="bi bi-droplet-fill me-1" style="color: #0077ff;"></i> Alta
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Botão de Envio -->
+                            <button type="submit" class="btn btn-primary w-100 py-3 mt-2" style="background: linear-gradient(135deg, #d63384 0%, #9c27b0 100%); border: none; font-weight: 600; letter-spacing: 0.5px;">
+                                <i class="bi bi-stars me-2"></i>DESCUBRA MEUS PRODUTOS IDEIAIS
+                            </button>
+                        </form>
+
+                        <!-- Resultados -->
+                        <div id="resultado-tom" class="mt-4" style="display: none;">
+                            <div class="text-center mb-4">
+                                <h4 style="color: #d63384; position: relative; display: inline-block;">
+                                    <span style="background: white; padding: 0 15px; position: relative; z-index: 2;">✨ Suas Recomendações ✨</span>
+                                    <span style="position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #d63384, transparent); z-index: 1;"></span>
+                                </h4>
+                            </div>
+                            
+                            <div id="produtos-recomendados" class="row g-4"></div>
+                            
+                            <div class="text-center mt-4">
+                                <button id="reiniciar-assistente" class="btn btn-outline-primary rounded-pill px-4">
+                                    <i class="bi bi-arrow-repeat me-1"></i> Refazer Teste
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Sistema de Recomendação Avançado
+document.addEventListener('DOMContentLoaded', function() {
+    const tomForm = document.getElementById('tom-form');
+    const resultadoDiv = document.getElementById('resultado-tom');
+    const produtosDiv = document.getElementById('produtos-recomendados');
+    const reiniciarBtn = document.getElementById('reiniciar-assistente');
+
+    // Banco de dados de produtos
+    const produtosDB = {
+        bases: {
+            'claro-quente': [
+                { nome: 'Base HD Bege Claro Dourado', codigo: 'VB-BASE-021', preco: 99.90, img: 'imagens/base-clara-dourada.jpg' },
+                { nome: 'Base Matte Bege Claro', codigo: 'VB-BASE-022', preco: 109.90, img: 'imagens/base-matte-clara.jpg' }
+            ],
+            'claro-frio': [
+                { nome: 'Base HD Bege Claro Rosado', codigo: 'VB-BASE-023', preco: 99.90, img: 'imagens/base-clara-rosada.jpg' }
+            ],
+            // ... (adicionar todas as combinações)
+        },
+        blush: {
+            'quente': [
+                { nome: 'Blush Terracota', codigo: 'VB-BLUSH-01', preco: 59.90, img: 'imagens/blush-terracota.jpg' }
+            ],
+            // ... (outros blush)
+        },
+        batons: {
+            'claro-quente': [
+                { nome: 'Batom Nude Quente', codigo: 'VB-BATOM-011', preco: 65.90, img: 'imagens/batom-nude-quente.jpg' }
+            ],
+            // ... (outros batons)
+        }
+    };
+
+    // Formulário de envio
+    tomForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const tomPele = document.querySelector('input[name="tom-pele"]:checked')?.value;
+        const subtom = document.querySelector('input[name="subtom"]:checked')?.value;
+        const cobertura = document.querySelector('input[name="cobertura"]:checked')?.value;
+        
+        if (!tomPele || !subtom || !cobertura) {
+            alert('Por favor, responda todas as perguntas!');
+            return;
+        }
+        
+        const recomendacoes = gerarRecomendacoes(tomPele, subtom, cobertura);
+        mostrarRecomendacoes(recomendacoes);
+    });
+
+    // Gerar recomendações
+    function gerarRecomendacoes(tomPele, subtom, cobertura) {
+        const key = `${tomPele}-${subtom}`;
+        const coberturaText = {
+            'leve': 'leve',
+            'media': 'média',
+            'alta': 'alta'
+        }[cobertura];
+
+        return {
+            bases: produtosDB.bases[key] || [],
+            blush: produtosDB.blush[subtom] || [],
+            batons: produtosDB.batons[key] || [],
+            dica: `Para pele ${tomPele} com subtom ${subtom}, recomendamos produtos de cobertura ${coberturaText} com ` + 
+                  (subtom === 'quente' ? 'tons dourados e terrosos que aquecem o rosto.' : 
+                   subtom === 'frio' ? 'tons rosados e berry que iluminam a pele.' : 
+                   'tons neutros que harmonizam perfeitamente.')
+        };
+    }
+
+    // Mostrar recomendações
+    function mostrarRecomendacoes(recomendacoes) {
+        produtosDiv.innerHTML = '';
+        
+        // Criar card de produto
+        const criarCardProduto = (produto, tipo) => `
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 border-0 shadow-sm" style="border-radius: 12px; overflow: hidden;">
+                    <div style="height: 180px; background: #f8f9fa; display: flex; align-items: center; justify-content: center;">
+                        <img src="${produto.img || 'imagens/placeholder.jpg'}" class="img-fluid" style="max-height: 100%;" alt="${produto.nome}">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">${produto.nome}</h6>
+                        <small class="text-muted">Código: ${produto.codigo}</small>
+                        <p class="h5 mt-2" style="color: #d63384;">R$ ${produto.preco.toFixed(2).replace('.', ',')}</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <button class="btn btn-sm btn-outline-primary w-100" onclick="adicionarAoCarrinho('${produto.nome}', ${produto.preco})">
+                            <i class="bi bi-cart-plus"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Adicionar seções de produtos
+        const adicionarSecao = (titulo, icone, produtos) => {
+            if (produtos.length > 0) {
+                produtosDiv.innerHTML += `
+                    <div class="col-12">
+                        <h5 class="mb-3" style="color: #d63384;">
+                            <i class="bi ${icone} me-2"></i>${titulo}
+                        </h5>
+                        <div class="row">
+                            ${produtos.map(p => criarCardProduto(p, titulo)).join('')}
+                        </div>
+                        <hr class="my-4">
+                    </div>
+                `;
+            }
+        };
+
+        adicionarSecao('Bases Perfeitas', 'bi-droplet', recomendacoes.bases);
+        adicionarSecao('Blush Harmonizados', 'bi-heart', recomendacoes.blush);
+        adicionarSecao('Batons Ideais', 'bi-moisturize', recomendacoes.batons);
+
+        // Adicionar dica profissional
+        produtosDiv.innerHTML += `
+            <div class="col-12">
+                <div class="card border-0" style="background-color: #fff9fb;">
+                    <div class="card-body">
+                        <h5 class="d-flex align-items-center" style="color: #d63384;">
+                            <i class="bi bi-lightbulb me-2"></i>Dica da Nossa Maquiadora
+                        </h5>
+                        <p class="mb-0">${recomendacoes.dica}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        resultadoDiv.style.display = 'block';
+        resultadoDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Reiniciar assistente
+    reiniciarBtn?.addEventListener('click', function() {
+        tomForm.reset();
+        resultadoDiv.style.display = 'none';
+        window.scrollTo({ top: tomForm.offsetTop - 100, behavior: 'smooth' });
+    });
+});
+</script>
+
     <!-- Seção de Chat Integrado Inteligente -->
     <section id="chat" class="py-5">
         <div class="container">
@@ -1033,6 +1400,8 @@
             </div>
         </div>
     </section>
+
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
@@ -1100,9 +1469,42 @@
             document.getElementById('fav-count').textContent = favCount;
         }
 
+        // Selecionar cor do produto
+        function selecionarCor(elemento) {
+            // Remove a seleção de todas as cores no mesmo grupo
+            const grupoCores = elemento.closest('.color-option');
+            grupoCores.querySelectorAll('.color-swatch').forEach(swatch => {
+                swatch.classList.remove('selected');
+            });
+            
+            // Adiciona a seleção na cor clicada
+            elemento.classList.add('selected');
+            
+            // Atualiza o display da cor selecionada
+            const produtoCard = elemento.closest('.produto-card');
+            const nomeProduto = produtoCard.querySelector('.card-title').textContent;
+            const displayCor = document.getElementById(`cor-selecionada-${nomeProduto}`);
+            
+            if (displayCor) {
+                displayCor.textContent = elemento.getAttribute('data-cor');
+            }
+        }
+
         // Adicionar ao carrinho
-        function adicionarAoCarrinho(nome, preco) {
-            const produtoExistente = carrinho.find(item => item.nome === nome);
+        function adicionarAoCarrinho(nome, preco, idCorSelecionada) {
+            // Verifica se há cor selecionada para produtos que têm opções de cor
+            let corSelecionada = 'N/A';
+            if (idCorSelecionada) {
+                const displayCor = document.getElementById(idCorSelecionada);
+                if (displayCor && displayCor.textContent !== 'Nenhuma cor selecionada') {
+                    corSelecionada = displayCor.textContent;
+                } else {
+                    alert('Por favor, selecione uma cor antes de adicionar ao carrinho.');
+                    return;
+                }
+            }
+            
+            const produtoExistente = carrinho.find(item => item.nome === nome && item.cor === corSelecionada);
             
             if (produtoExistente) {
                 produtoExistente.quantidade += 1;
@@ -1110,7 +1512,8 @@
                 carrinho.push({
                     nome: nome,
                     preco: preco,
-                    quantidade: 1
+                    quantidade: 1,
+                    cor: corSelecionada
                 });
             }
             
@@ -1133,13 +1536,26 @@
         }
 
         // Adicionar aos favoritos
-        function adicionarFavorito(nome, preco) {
-            const produtoExistente = favoritos.find(item => item.nome === nome);
+        function adicionarFavorito(nome, preco, idCorSelecionada) {
+            // Verifica se há cor selecionada para produtos que têm opções de cor
+            let corSelecionada = 'N/A';
+            if (idCorSelecionada) {
+                const displayCor = document.getElementById(idCorSelecionada);
+                if (displayCor && displayCor.textContent !== 'Nenhuma cor selecionada') {
+                    corSelecionada = displayCor.textContent;
+                } else {
+                    alert('Por favor, selecione uma cor antes de adicionar aos favoritos.');
+                    return;
+                }
+            }
+            
+            const produtoExistente = favoritos.find(item => item.nome === nome && item.cor === corSelecionada);
             
             if (!produtoExistente) {
                 favoritos.push({
                     nome: nome,
-                    preco: preco
+                    preco: preco,
+                    cor: corSelecionada
                 });
                 
                 localStorage.setItem('velvetBloomFavoritos', JSON.stringify(favoritos));
@@ -1221,7 +1637,8 @@
                     
                     carrinhoLista.innerHTML += `
                         <tr>
-                            <td>${item.nome}</td>
+                            <td>${item.nome} ${item.cor !== 'N/A' ? `(${item.cor})` : ''}</td>
+                            <td>${item.cor !== 'N/A' ? item.cor : '-'}</td>
                             <td>R$ ${item.preco.toFixed(2).replace('.', ',')}</td>
                             <td>
                                 <div class="input-group" style="width: 120px;">
@@ -1262,9 +1679,9 @@
                         <div class="col-md-6">
                             <div class="card favorito-item">
                                 <div class="card-body">
-                                    <h5 class="card-title">${item.nome}</h5>
+                                    <h5 class="card-title">${item.nome} ${item.cor !== 'N/A' ? `(${item.cor})` : ''}</h5>
                                     <p class="card-text">R$ ${item.preco.toFixed(2).replace('.', ',')}</p>
-                                    <button class="btn btn-outline-primary btn-sm" onclick="adicionarAoCarrinho('${item.nome}', ${item.preco})">
+                                    <button class="btn btn-outline-primary btn-sm" onclick="adicionarAoCarrinho('${item.nome}', ${item.preco}, '${item.cor}')">
                                         Adicionar ao Carrinho
                                     </button>
                                     <button class="btn btn-outline-danger btn-sm favorito-remover" onclick="removerDosFavoritos(${index})">
